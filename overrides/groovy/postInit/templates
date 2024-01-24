@@ -1,0 +1,111 @@
+crafting.addShaped('', item('') * 1, [
+    [item(''), item(''), item('')],
+    [item(''), item(''), item('')],
+    [item(''), item(''), item('')]
+    ]
+)
+
+// 1
+crafting.addShapeless('', item('') * 1, [item('')])
+
+// 2
+crafting.addShapeless('', item('') * 1, [item(''), item('')])
+// 3
+
+crafting.addShapeless('', item('') * 1, [item(''), item(''), item('')])
+
+// 4
+crafting.addShapeless('', item('') * 1, [item(''), item(''), item(''), item('')])
+
+// 5
+crafting.addShapeless('', item('') * 1, [item(''), item(''), item(''), item(''), item('')])
+
+// 6
+crafting.addShapeless('', item('') * 1, [item(''), item(''), item(''), item(''), item(''), item('')])
+
+// 7
+crafting.addShapeless('', item('') * 1, [item(''), item(''), item(''), item(''), item(''), item(''), item('')])
+
+// 8
+crafting.addShapeless('', item('') * 1, [item(''), item(''), item(''), item(''), item(''), item(''), item(''), item('')])
+
+// 9
+crafting.addShapeless('', item('') * 1, [item(''), item(''), item(''), item(''), item(''), item(''), item(''), item(''), item('')])
+
+furnace.add(item(''), item(''), 0.5f)
+
+// wood
+mods.gregtech.cutter.recipeBuilder()
+    .inputs(item(''))
+    .fluidInputs(fluid('water') * 4)
+    .outputs(item('',) * 6, item('gregtech:meta_dust', 1617) * 2)
+    .duration(400)
+    .EUt(7)
+    .buildAndRegister();
+
+mods.gregtech.cutter.recipeBuilder()
+    .inputs(item(''))
+    .fluidInputs(fluid('distilled_water') * 4)
+    .outputs(item('',) * 6, item('') * 2)
+    .duration(300)
+    .EUt(7)
+    .buildAndRegister();
+
+mods.gregtech.cutter.recipeBuilder()
+    .inputs(item(''))
+    .fluidInputs(fluid('lubricant') * 4)
+    .outputs(item('', 1) * 6, item('gregtech:meta_dust', 1617) * 2)
+    .duration(200)
+    .EUt(7)
+    .buildAndRegister();
+
+mods.gregtech.assembler.recipeBuilder()
+    .inputs(item(''))
+    .outputs(item('minecraft:crafting_table'))
+    .duration(80).EUt(6)
+    .buildAndRegister();
+
+def cutWood(input, output) {
+    mods.gregtech.cutter.recipeBuilder()
+        .inputs(item(input))
+        .fluidInputs(fluid('water') * 4)
+        .outputs(item(output) * 6, item('gregtech:meta_dust', 1617) * 2)
+        .duration(400)
+        .EUt(7)
+        .buildAndRegister();
+}
+
+def fixUpWood(removeID, addID, log, plank) {
+    crafting.remove(removeID)
+    crafting.addShapeless(addID, item(plank) * 2, [item(log)])
+
+    mods.gregtech.cutter.recipeBuilder()
+    .inputs(item(log))
+    .fluidInputs(fluid('water') * 4)
+    .outputs(item(plank) * 6, item('gregtech:meta_dust', 1617) * 2)
+    .duration(400)
+    .EUt(7)
+    .buildAndRegister();
+
+mods.gregtech.cutter.recipeBuilder()
+    .inputs(item(log))
+    .fluidInputs(fluid('distilled_water') * 4)
+    .outputs(item(plank) * 6, item('') * 2)
+    .duration(300)
+    .EUt(7)
+    .buildAndRegister();
+
+mods.gregtech.cutter.recipeBuilder()
+    .inputs(item(log))
+    .fluidInputs(fluid('lubricant') * 4)
+    .outputs(item(plank) * 6, item('gregtech:meta_dust', 1617) * 2)
+    .duration(200)
+    .EUt(7)
+    .buildAndRegister();
+
+mods.gregtech.assembler.recipeBuilder()
+    .inputs(item(log))
+    .outputs(item('minecraft:crafting_table'))
+    .duration(80).EUt(6)
+    .buildAndRegister();
+}

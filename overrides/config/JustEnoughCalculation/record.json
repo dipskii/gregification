@@ -1,0 +1,82 @@
+{
+    "craft": {
+        "amount": "1",
+        "recents": [{
+            "type": "itemStack",
+            "content": {
+                "amount": 1L,
+                "item": "harvestcraft:southernstylebreakfastitem"
+            }
+        }],
+        "inventory": 0b
+    },
+    "math": {
+        "current": "",
+        "last": "0",
+        "state": 0,
+        "operator": 0
+    },
+    "player": {
+        "recipes": {"Default": [{
+            "output": [{
+                "type": "itemStack",
+                "content": {
+                    "amount": 1L,
+                    "item": "harvestcraft:southernstylebreakfastitem"
+                }
+            }],
+            "input": [
+                {
+                    "type": "itemStack",
+                    "content": {
+                        "amount": 1L,
+                        "item": "harvestcraft:cuttingboarditem"
+                    }
+                },
+                {
+                    "type": "itemStack",
+                    "content": {
+                        "amount": 1L,
+                        "item": "harvestcraft:gritsitem"
+                    }
+                },
+                {
+                    "type": "itemStack",
+                    "content": {
+                        "amount": 1L,
+                        "item": "harvestcraft:biscuitsandgravyitem"
+                    }
+                },
+                {
+                    "type": "oreDict",
+                    "content": {
+                        "amount": 1L,
+                        "name": "listAllporkcooked"
+                    }
+                },
+                {
+                    "type": "oreDict",
+                    "content": {
+                        "amount": 1L,
+                        "name": "listAllegg"
+                    }
+                },
+                {
+                    "type": "itemStack",
+                    "content": {
+                        "amount": 1L,
+                        "item": "harvestcraft:toastitem"
+                    }
+                }
+            ],
+            "catalyst": [{
+                "type": "itemStack",
+                "content": {
+                    "amount": 1L,
+                    "item": "minecraft:crafting_table"
+                }
+            }]
+        }]},
+        "last": "Default"
+    }
+}
